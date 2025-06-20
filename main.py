@@ -39,11 +39,11 @@ def obtener_picks_ev_plus():
 
             if prob >= MIN_PROB and cuota >= MIN_ODDS and ev >= MIN_EV:
                 mensaje = (
-                    "📊 Nuevo Pick EV+\n\n"
-                    f"🏟️ {nombre}\n"
-                    f"✅ Probabilidad: {round(prob*100)}%\n"
-                    f"💸 Cuota: {cuota}\n"
-                    f"📈 EV+: {round(ev, 2)}"
+                    "ðŸ“Š Nuevo Pick EV+\n\n"
+                    f"ðŸŸï¸ {nombre}\n"
+                    f"âœ… Probabilidad: {round(prob*100)}%\n"
+                    f"ðŸ’¸ Cuota: {cuota}\n"
+                    f"ðŸ“ˆ EV+: {round(ev, 2)}"
                 )
                 resultados.append(mensaje)
 
