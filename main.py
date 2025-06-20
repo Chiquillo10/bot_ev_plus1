@@ -5,6 +5,10 @@ import os
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
+MIN_PROB = float(os.getenv("MIN_PROB", 0.70))
+MIN_ODDS = float(os.getenv("MIN_ODDS", 1.60))
+MIN_EV = float(os.getenv("MIN_EV", 0.01))
+
 def calcular_ev(prob, cuota):
     return (prob * cuota) - 1
 
@@ -33,7 +37,7 @@ def obtener_picks_ev_plus():
 
             ev = calcular_ev(prob, cuota)
 
-            if prob >= 0.70 and cuota >= 1.60 and ev > 0:
+            if prob >= MIN_PROB and cuota >= MIN_ODDS and ev >= MIN_EV:
                 mensaje = (
                     "📊 Nuevo Pick EV+\n\n"
                     f"🏟️ {nombre}\n"
