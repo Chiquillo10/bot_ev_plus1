@@ -1,3 +1,4 @@
+return resultados
 import requests
 from bs4 import BeautifulSoup
 import os
@@ -51,6 +52,12 @@ def obtener_picks_ev_plus():
             continue
 
     return resultados
+
+# Ejecutar
+picks = obtener_picks_ev_plus()
+
+for p in picks:
+    enviar_mensaje(p)
 
 # Ejecutar
 picks = obtener_picks_ev_plus()
