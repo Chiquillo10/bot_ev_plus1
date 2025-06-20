@@ -30,7 +30,7 @@ def obtener_picks_ev_plus():
         try:
             nombre = pick.select_one(".pick-meta").get_text(strip=True)
             cuota_texto = pick.select_one(".pick-odds").get_text(strip=True).replace("+", "")
-            cuota = 1 + int(cuota_texto)/100 if cuota_texto.isdigit() else 2.00
+            cuota = 1 + int(cuota_texto) / 100 if cuota_texto.isdigit() else 2.00
 
             prob_texto = pick.select_one(".probability").get_text(strip=True).replace("%", "")
             prob = int(prob_texto) / 100
